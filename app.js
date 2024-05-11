@@ -1,3 +1,6 @@
+/**
+ * https://github.com/danielvazcont
+ */
 const bells = new Audio('bell.wav'); 
 const startBtn = document.querySelector('.btn-start'); 
 const stopBtn = document.querySelector('.btn-pause');
