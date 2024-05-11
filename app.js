@@ -12,7 +12,7 @@ const song = new Audio('song.mp3');
 song.loop = true; 
 const volumen = 0.2; 
 song.volume = volumen;
-song.play();
+
 
 /*buttons for add more time*/
 const addMinutes = document.getElementsByClassName("btn-arrow");
@@ -53,6 +53,7 @@ let myInterval;
 let state = true;
 
 const appTimer = () => {
+  song.play();
   const sessionAmount = Number.parseInt(session.textContent);
   const sessionAmount2 = Number.parseInt(session2.textContent);
   if(state) {
@@ -96,6 +97,7 @@ const appTimer = () => {
 
 //function to pause the timer
 const stopTimer = () => {
+  song.pause();
   errorText.innerText = "press start to begin";
   errorText.style.color = "white";
   clearInterval(myInterval);
